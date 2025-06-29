@@ -9,6 +9,14 @@ on:
     branches:
       - master
       - exampleSite
+  pull_request:  # 添加这个触发器来响应 PR 事件
+    paths-ignore:
+      - "images/**"
+      - "LICENSE"
+      - "README.md"
+    branches:
+      - master
+      - exampleSite
   workflow_dispatch:
     # manual run
     inputs:
