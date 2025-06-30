@@ -1,4 +1,4 @@
-name: Deploy Hugo PaperMod Demo to Pages
+name: Deploy GithubPages
 
 on:
   push:
@@ -9,6 +9,13 @@ on:
     branches:
       - master
       - exampleSite
+  pull_request:  # 添加这个触发器来响应 PR 事件
+    paths-ignore:
+      - "images/**"
+      - "LICENSE"
+      - "README.md"
+    branches:
+      - master
   workflow_dispatch:
     # manual run
     inputs:
